@@ -64,8 +64,10 @@ public class Account {
         if (amount>this.balance){
             System.out.println("Insufficient Balance.");
         }else {
+            System.out.println("Success.");
             balance-=amount;
         }
+        System.out.print("Current balance: ");
         return balance;
     }
     public int debit (int amount){
@@ -73,11 +75,13 @@ public class Account {
     }
     public int transferTo(Account another, int amount){
         if (balance>=amount){
+            System.out.println("Success.");
             another.balance+=amount;
             this.balance-=amount;
         }else {
             System.out.println("Transaction failed. Not Enough Balance.");
         }
+        System.out.print("Current balance: ");
         return balance;
     }
 

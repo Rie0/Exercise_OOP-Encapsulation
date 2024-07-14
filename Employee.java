@@ -64,9 +64,10 @@ public class Employee {
 
     public void transferSalary(Account account){
         if (this.accountIBan.equals(account.getIban())){
+            System.out.println("Success.");
             account.debit(salary);
         } else {
-            System.out.println("There's a problem with IBan number.");
+            System.out.println("Transaction failed. There's a problem with IBan number.");
         }
     }
 
